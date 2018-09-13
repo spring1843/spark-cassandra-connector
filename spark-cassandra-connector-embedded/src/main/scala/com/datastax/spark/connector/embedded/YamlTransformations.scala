@@ -130,6 +130,7 @@ object YamlTransformations {
     addTransformation("listen_address", listenAddress)
     addTransformation("native_transport_port", nativeTransportPort: JInteger)
     addTransformation("rpc_address", rpcAddress)
+    addTransformation("cdc_raw_directory", Paths.get(cassandraDir, "cdcraw").toString)
 
     if (YamlTemplateVersion >= "3.0") {
       addTransformation("hints_directory", Paths.get(cassandraDir, "hints").toString)
